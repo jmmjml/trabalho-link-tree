@@ -23,12 +23,12 @@ export default function HomeScreen() {
     />
     <ThemedView style={styles.texto}>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Redes Sociais</ThemedText>
+        <ThemedText type="title">Formas de Contato</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText style={{textAlign:"justify"}}>
-          Aqui está uma forma de encaminhamento rápido para minhas redes sociais.
+          Aqui está uma forma de encaminhamento rápido para minhas formas de contato e redes sociais.
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.titleContainer}>
@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
     backgroundColor: 'transparent',
     flex: 1,
     justifyContent: 'center',
