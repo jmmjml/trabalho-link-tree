@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { StyleSheet, useColorScheme } from 'react-native';
+import { StyleSheet, useColorScheme,ImageBackground } from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -53,7 +53,7 @@ export default function ParallaxScrollView({
           ]}>
           {headerImage}
         </Animated.View>
-        <ThemedView style={styles.content}>{children}</ThemedView>
+        <ImageBackground source={require("@/assets/images/fundo.png")} resizeMode="cover" style={{flex:1}}><ThemedView style={styles.content}>{children}</ThemedView></ImageBackground>
       </Animated.ScrollView>
     </ThemedView>
   );
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     padding: 32,
     gap: 16,
     overflow: 'hidden',
-    backgroundColor: '#231651',
+    backgroundColor: 'transparent',
     height: 510,
     alignItems: 'center',
     justifyContent: 'center',
