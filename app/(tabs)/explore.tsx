@@ -114,6 +114,14 @@ export default function TabTwoScreen() {
       console.error("Erro ao abrir o cliente de telefone:", error);
     }
   };
+  const PinterestLink = async () => {
+    const pinterestProfileUrl = 'https://www.pinterest.com/jmmjml1255';
+    try {
+      await Linking.openURL(pinterestProfileUrl);
+    } catch (error) {
+      console.error('Erro ao abrir o perfil no Pinterest:', error);
+    }
+  };
 
   return (
     <ParallaxScrollView
@@ -396,6 +404,35 @@ export default function TabTwoScreen() {
               style={styles.divtextobotao}
             >
               <ThemedText style={styles.textobotao}>Telefone</ThemedText>
+            </LinearGradient>
+          </ThemedView>
+          <ThemedView style={styles.partevaziabotao}>
+            <LinearGradient
+              colors={["#A1D1E9", "#231651"]}
+              style={styles.partevaziabotao}
+            >
+              <ThemedText></ThemedText>
+            </LinearGradient>
+          </ThemedView>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={PinterestLink} style={styles.botao}>
+          <ThemedView style={styles.fotobotao}>
+            <LinearGradient
+              colors={["#A1D1E9", "#231651"]}
+              style={styles.fotobotao}
+            >
+              <Image
+                source={require("@/assets/images/pinterest.png")}
+                style={styles.imagembotao}
+              />
+            </LinearGradient>
+          </ThemedView>
+          <ThemedView style={styles.divtextobotao}>
+            <LinearGradient
+              colors={["#A1D1E9", "#231651"]}
+              style={styles.divtextobotao}
+            >
+              <ThemedText style={styles.textobotao}>Pinterest</ThemedText>
             </LinearGradient>
           </ThemedView>
           <ThemedView style={styles.partevaziabotao}>
